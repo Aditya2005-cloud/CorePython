@@ -5,10 +5,21 @@ coordinates = 3 + 5j  # complex: complex number
 c = "Hello, World!"  # str: string
 d=True  # bool: boolean (True/False)
 
+#how to convert one data type to another
+numbers=float(10) # type conversion: converts integer 10 to float 10.0
+print(numbers)  # Output: 10.0
+
 # --- Sequence Types ---
 fruits = ["apple", "pear"]  # list: mutable collection
 colors = ("red", "blue")    # tuple: immutable collection
 numbers = range(1, 6)       # range: sequence from 1 to 5
+
+# converting
+Name=[]# empty list
+permanent_Names=tuple(Name)# converting list to tuple
+name = list(permanent_Names) # converting tuple to list
+set_of_names = set(name) # converting list to set (removes duplicates)
+
 
 frozen_ids = frozenset([1, 2, 3]) #Like set, but cannot be changed
 
