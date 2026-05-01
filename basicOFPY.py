@@ -9,6 +9,33 @@ d=True  # bool: boolean (True/False)
 numbers=float(10) # type conversion: converts integer 10 to float 10.0
 print(numbers)  # Output: 10.0
 
+# arethmetic operators
+print(10 + 5)   # 15
+print(10 - 5)   # 5
+print(10 * 5)   # 50
+print(10 / 5)   # 2.0
+print(10 // 3)  # 3 (floor division) is used to divide two numbers and round down to the nearest whole number. In this case, 10 divided by 3 is approximately 3.33, but floor division rounds it down to 3.
+print(10 % 3)   # 1 (modulus) its gives the remainder of the division
+print(10 ** 2)  # 100 (exponentiation) is used to raise a number to the power of another number. In this case, 10 is raised to the power of 2, resulting in 100.
+
+#  relational operators
+print(5 == 5)   # True
+print(5 != 3)   # True
+print(5 > 3)    # True
+print(5 < 3)    # False
+print(5 >= 5)   # True
+print(5 <= 3)   # False
+
+# logical operators
+True or False   # (boolean) is a logical operator that returns True if at least one of the operands is True, and False otherwise. In this case, since the first operand is True, the result will be True.
+print(True or False)   # True
+print(False or False)  # False
+True and False  # (boolean) is a logical operator that returns True only if both operands
+print(True and True)    # True
+print(True and False)   # False
+print(not True)   # False is a logical operator that negates the value of the operand. In this case, since the operand is True, the result will be False.
+print(not False)  # True is a logical operator that negates the value of the operand. In this case, since the operand is False, the result will be True.
+
 # --- Sequence Types ---
 fruits = ["apple", "pear"]  # list: mutable collection
 colors = ("red", "blue")    # tuple: immutable collection
