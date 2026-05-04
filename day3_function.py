@@ -86,3 +86,28 @@ num1=int(input("enter the first number: "))
 num2=int(input("enter the second number: "))
 what_to_do=input("enter the operation you want to perform (add, subtract, multiply, divide): ")
 print(calcu(num1,num2,what_to_do))
+
+
+#_____________________________________________________________
+
+person={"Alice":{"age":18,"city":"New York"},
+        "Bob":{"age":25,"city":"Los Angeles"},
+        "Charlie":{"age":60,"city":"Chicago"},
+        "David":{"age":28,"city":"Houston"},
+        "Eve":{"age":18,"city":"Phoenix"},
+        "Frank":{"age":40,"city":"Philadelphia"},
+        "Grace":{"age":27,"city":"San Antonio"},
+        "Heidi":{"age":15,"city":"San Diego"},
+        "Ivan":{"age":10,"city":"Dallas"},
+        "Judy":{"age":19,"city":"San Jose"}}
+def check_age_group(person):
+    for i in person:
+        if person[i]["age"]>=18 and person[i]["age"]<=40:
+            print(f"{i} is {person[i]['age']} years old and {i} is adult")
+        elif person[i]["age"]<18:
+            print(f"{i} is {person[i]['age']} years old and {i} is minor")
+        else:
+            print(f"{i} is {person[i]['age']} years old and {i} is senior citizen")
+check_age_group(person)
+
+
