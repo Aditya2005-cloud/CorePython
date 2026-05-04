@@ -278,3 +278,14 @@ print(squared_numbers)  # Output: [1, 4, 9, 16, 25]
 from functools import reduce
 product = reduce(lambda x, y: x * y, numbers)
 print(product)  # Output: 120
+
+
+try:
+    # code that may cause error
+    pass# pass means "do nothing". It's a placeholder that allows you to write code that syntactically requires a statement but you don't want to execute anything.
+except:
+    pass
+    # runs if error happens
+finally:
+    pass
+    # always runs (error or not)
