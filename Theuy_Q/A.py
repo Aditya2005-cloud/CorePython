@@ -1,3 +1,0 @@
-# py project 100% free 
-#stack
-# lets creat a webside where atendence is taken on login by outh2.0 and we check when user login and save it to db as date time email name of user in db we can use mongodb or supabase after creating that much we will make somthing which will auto-matic logout the user in 12h so the next login is detected as if user login 1 and stay infinite time there without logut it wont count the atendence thats for now 
