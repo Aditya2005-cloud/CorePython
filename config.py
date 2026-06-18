@@ -1,4 +1,4 @@
-import mysql.connector as sq
+import mysql.connector as sq# pip install mysql-connector-python
 
 con=sq.connect(
     host="localhost",
