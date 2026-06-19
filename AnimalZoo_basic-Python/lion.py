@@ -1,7 +1,8 @@
-from animal import Animal as a 
+# lion.py
+from animal import Animal
 
-class Lion(a):
-    def __init__(self,name,age):
-        super().__init__(name,age)
-    def roar(self):
-        print(f"{self.name} is roaring")  
+class Lion(Animal):
+    def __init__(self, name, age, color):
+        super().__init__(name, age, color)
+    def make_sound(self):
+        print("Roar")
