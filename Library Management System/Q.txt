@@ -1,0 +1,416 @@
+Library Management System
+
+Build a CLI-based Library Management System.
+
+The application manages books, members, borrowing, returning, searching, and reports.
+
+Your folder structure
+
+Create:
+
+library_manager/
+│
+├── main.py
+│
+├── models/
+│   ├── __init__.py
+│   ├── book.py
+│   ├── member.py
+│   ├── library.py
+│   └── loan.py
+│
+├── services/
+│   ├── __init__.py
+│   ├── book_service.py
+│   ├── member_service.py
+│   ├── loan_service.py
+│   └── report_service.py
+│
+├── utils/
+│   ├── __init__.py
+│   ├── validators.py
+│   ├── helpers.py
+│   └── constants.py
+│
+├── storage/
+│   ├── __init__.py
+│   ├── json_storage.py
+│   └── csv_storage.py
+│
+└── README.py
+
+Again, don't create JSON or CSV files yourself. Your Python program should create them when needed.
+
+What the application should do
+
+The library should allow you to:
+
+Books
+Add a book
+Remove a book
+Update book information
+Search books
+View all books
+Find available books
+Find borrowed books
+Sort books
+
+A book should have information such as:
+
+Book ID
+Title
+Author
+Category
+ISBN
+Publication year
+Availability
+Members
+
+Allow the library to:
+
+Register member
+Remove member
+Search member
+View members
+View member's borrowed books
+
+A member could contain:
+
+Member ID
+Name
+Email
+Phone
+Membership date
+Borrowed books
+Borrowing
+
+A member should be able to borrow a book.
+
+The system should check:
+
+Does the book exist?
+        ↓
+Is the member registered?
+        ↓
+Is the book available?
+        ↓
+Has the member reached borrowing limit?
+        ↓
+Create loan
+Returning
+
+A member should be able to return a book.
+
+The system should determine:
+
+Was the book actually borrowed?
+        ↓
+When was it borrowed?
+        ↓
+When was it returned?
+        ↓
+Was it returned late?
+        ↓
+Calculate fine
+OOP requirements
+
+This project must use proper OOP.
+
+Book
+
+Create a Book class.
+
+Practice:
+
+constructor
+instance attributes
+properties
+validation
+__str__
+__repr__
+__eq__
+Member
+
+Create a Member class.
+
+It should manage the member's information and borrowed books.
+
+Practice:
+
+objects
+instance methods
+encapsulation
+properties
+collections inside objects
+Loan
+
+Create a Loan class.
+
+It should represent:
+
+Member
++
+Book
++
+Borrow date
++
+Due date
++
+Return date
++
+Fine
+
+Use datetime.
+
+Library
+
+Create a Library class that represents the actual library.
+
+It should contain:
+
+books
+members
+loans
+
+It should be able to manage them.
+
+Important OOP challenge
+
+Use inheritance.
+
+Create:
+
+                 Book
+                  |
+          ┌───────┴────────┐
+          ↓                ↓
+     PhysicalBook       EBook
+
+Both are books, but they can behave differently.
+
+For example:
+
+Physical book
+
+Can be borrowed
+Has shelf location
+
+EBook
+
+Can be downloaded
+Has file size
+May not have a physical shelf
+
+Use this to practice:
+
+inheritance
+super()
+method overriding
+polymorphism
+Lambda challenge
+
+Your program should allow books to be sorted by:
+
+1. Title
+2. Author
+3. Publication year
+4. Category
+
+Use lambda appropriately.
+
+Comprehension challenge
+
+Use comprehensions for things such as:
+
+all available books
+all books by an author
+all borrowed books
+unique book categories
+members with active loans
+
+Use:
+
+list comprehension
+set comprehension
+dictionary comprehension
+*args / **kwargs
+
+Create a flexible search/report mechanism.
+
+For example, conceptually you might want:
+
+search_books(
+    author="George Orwell",
+    category="Fiction"
+)
+
+or:
+
+generate_report(
+    status="borrowed",
+    category="Science"
+)
+
+Use **kwargs where appropriate.
+
+File handling
+
+Your application must save its data.
+
+Use:
+
+JSON → application data
+CSV  → reports/export
+
+Your Python program should create:
+
+data/
+    books.json
+    members.json
+    loans.json
+
+and:
+
+reports/
+    books.csv
+    loans.csv
+
+automatically.
+
+Practice:
+
+open()
+with
+JSON
+CSV
+pathlib
+reading
+writing
+file existence
+directory creation
+exceptions
+Exception handling
+
+Your program should handle:
+
+Invalid book ID
+Invalid member ID
+Book doesn't exist
+Member doesn't exist
+Book already borrowed
+Member has reached borrowing limit
+Invalid date
+Invalid email
+Invalid ISBN
+Invalid menu choice
+Missing data file
+Corrupted JSON
+
+Create at least one custom exception.
+
+For example, conceptually:
+
+BookNotAvailableError
+Main menu
+
+Your CLI should eventually have something similar to:
+
+========================================
+          LIBRARY MANAGEMENT
+========================================
+
+1. Book Management
+2. Member Management
+3. Borrow Book
+4. Return Book
+5. Search
+6. Reports
+7. Export Data
+8. Save
+9. Exit
+Book menu
+1. Add Book
+2. Remove Book
+3. Update Book
+4. View All
+5. Search
+6. Sort
+7. Available Books
+8. Borrowed Books
+9. Back
+Member menu
+1. Register Member
+2. Remove Member
+3. Search Member
+4. View Members
+5. Member Borrowing History
+6. Back
+Report menu
+1. All Books
+2. Available Books
+3. Borrowed Books
+4. Overdue Books
+5. Most Borrowed Books
+6. Most Active Members
+7. Export CSV
+8. Back
+Your constraints
+
+For this project:
+
+You ARE allowed to use
+Python standard library
+
+Especially:
+
+datetime
+pathlib
+json
+csv
+abc
+Don't use
+pandas
+numpy
+database
+SQL
+Flask
+Django
+external packages
+
+The purpose is still Core Python revision.
+
+Your challenge level
+
+Try to implement it in this order:
+
+Phase 1
+↓
+Models
+
+Phase 2
+↓
+Services
+
+Phase 3
+↓
+Utilities
+
+Phase 4
+↓
+Storage
+
+Phase 5
+↓
+main.py
+
+Phase 6
+↓
+Connect everything
+
+Phase 7
+↓
+Testing + exceptions
+
+Phase 8
+↓
+Refactor
