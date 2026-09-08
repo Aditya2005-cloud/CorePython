@@ -88,3 +88,11 @@ print(b)
 print(a is b)
 
 print("-"*50)
+
+def add_item(item, box=[]):
+    box.append(item)
+    return box
+
+print(add_item("A"))
+print(add_item("B"))
+print(add_item("C"))
