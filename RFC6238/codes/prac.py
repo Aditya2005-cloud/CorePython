@@ -133,3 +133,28 @@ print(hash1.hexdigest())
 
 print("\nMessage 2:")
 print(hash2.hexdigest())
+
+print("-"*50)
+
+message = b"hello world"
+
+key1 = b"my-secret"
+key2 = b"different-secret"
+
+hash1 = hmac.new(
+    key1,
+    message,
+    hashlib.sha256
+)
+
+hash2 = hmac.new(
+    key2,
+    message,
+    hashlib.sha256
+)
+
+print("Key 1:")
+print(hash1.hexdigest())
+
+print("\nKey 2:")
+print(hash2.hexdigest())
