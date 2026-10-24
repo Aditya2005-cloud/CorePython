@@ -158,3 +158,23 @@ print(hash1.hexdigest())
 
 print("\nKey 2:")
 print(hash2.hexdigest())
+
+print("-"*50)
+
+key = b"my-secret"
+message = b"hello world"
+
+result = hmac.new(# new create a new obj 
+    key,
+    message,
+    hashlib.sha1
+)
+
+print("HMAC object:")
+print(result)
+
+print("\nRaw digest:")
+print(result.digest())
+
+print("\nHex digest:")
+print(result.hexdigest())
