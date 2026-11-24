@@ -54,3 +54,16 @@ The password manager currently stores passwords as plain text in its local JSON 
 - These projects are learning exercises and may have different levels of completion.
 - Run each project from its own folder when it relies on local files or modules.
 - Generated Python cache files and virtual environments are excluded through `.gitignore`.
+
+
+## Contributing
+
+Contributions are welcome! Feel free to fork this repository, make improvements, fix bugs, or suggest new features.
+
+If you'd like to contribute:
+1. Fork this repository.
+2. Create a new branch.
+3. Make your changes.
+4. Submit a Pull Request.
+
+Every contribution is appreciated! 
